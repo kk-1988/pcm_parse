@@ -1,6 +1,9 @@
 /*
 * 左声道音量降低一半
 */
+#include <stdio.h>
+#include <stdlib.h>
+
 int simplest_pcm16le_halfvolumeleft(char *url)
 {
     FILE *fp = fopen(url, "rb+");
@@ -9,7 +12,7 @@ int simplest_pcm16le_halfvolumeleft(char *url)
 
     unsigned char *sample = (unsigned char *)malloc(4);
 
-    while(!foef(fp))
+    while(!feof(fp))
     {
         short *samplenum = NULL;
         fread(sample, 1, 4, fp);
