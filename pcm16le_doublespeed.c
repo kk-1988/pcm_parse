@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void simplest_pcm16le_doublespeed(char *url)
+int simplest_pcm16le_doublespeed(char *url)
 {
     FILE *fp = fopen(url, "rb+");
     FILE *fp1 = fopen("output_doublespeed.pcm", "wb+");
@@ -30,6 +30,8 @@ void simplest_pcm16le_doublespeed(char *url)
 	free(sample);
 	fclose(fp);
 	fclose(fp1);
+
+    return 0;
 }
 
 int main(int argc,char *argv[])
