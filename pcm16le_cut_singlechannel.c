@@ -23,7 +23,7 @@ int simplest_pcm16le_cut_singlechannel(char *url, int start_num, int dur_num)
 
             fprintf(fp_stat, "%6d,", samplenum);
             if(cnt%10 == 0)
-                fprintf(fp_stat, "%6d\n", samplenum);
+                fprintf(fp_stat, "\n", samplenum);
         }    
 
         cnt++;
